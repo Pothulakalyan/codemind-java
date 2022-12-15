@@ -15,12 +15,11 @@ class file
             }
         }
         return true;
-    
     }
     public static void main(String args[])
     {
         Scanner k=new Scanner(System.in);
-        int a,se,count=0,flag=0;
+        int a,se,c=0,f=0;
         a=k.nextInt();
         int arr[]=new int[a];
         for(int i=0;i<a;i++)
@@ -34,14 +33,14 @@ class file
             {
                 if(se>=arr[i])
                 {
-                    count++;
-                    flag=0;
+                    c++;
+                    f=0;
                 }
             }
         }
-        if(flag==0)
+        if(f==0)
         {
-            System.out.println(count);
+            System.out.println(c);
         }
     }
 }
