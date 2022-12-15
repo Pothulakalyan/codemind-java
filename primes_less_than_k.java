@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 class file
 {
     public static boolean isprime(int n)
@@ -8,41 +7,41 @@ class file
         {
             return false;
         }
-        for(int i=2;i<=Math.sqrt(n);i++)
+        for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
             if(n%i==0)
             {
                 return false;
             }
-            
         }
         return true;
-        
+    
     }
-    public static void main(String[] args)
+    public static void main(String args[])
     {
         Scanner k=new Scanner(System.in);
-        int n,m,count=0;
-        n=k.nextInt();
-        int arr[]=new int [n];
-        for(int i=0;i<n;i++)
+        int a,se,count=0,flag=0;
+        a=k.nextInt();
+        int arr[]=new int[a];
+        for(int i=0;i<a;i++)
         {
             arr[i]=k.nextInt();
         }
-        m=k.nextInt();
-        for(int i=0;i<n;i++)
+        se=k.nextInt();
+        for(int i=0;i<a;i++)
         {
             if(isprime(arr[i]))
             {
-                if(arr[i]<=m)
+                if(se>=arr[i])
                 {
                     count++;
+                    flag=0;
                 }
             }
         }
-        System.out.println(count);
-        
+        if(flag==0)
+        {
+            System.out.println(count);
+        }
     }
-    
-    
 }
