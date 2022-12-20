@@ -1,15 +1,16 @@
 import java.util.*;
-class ReverseString
+class file
 {
-    public static void main(String[] args)
+    public static void main(String args[])
     {
         Scanner k=new Scanner(System.in);
-        String s1=k.nextLine();
-        String s2="";
-        for(int i=s1.length()-1;i>=0;i--)
+        String s=k.nextLine();
+        String words[]=s.split(" ");
+        String output=" ";
+        for(int i=words.length-1;i>=0;i--)
         {
-            s2+=s1.charAt(i);
+            output+=" "+words[i];
         }
-        System.out.println(s2);
+        System.out.println(output.trim());
     }
 }
